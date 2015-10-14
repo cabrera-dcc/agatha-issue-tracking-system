@@ -1,0 +1,13 @@
+{
+    "name": "agatha"
+  , "version": "0.0.1"
+  , "private": true
+  , "scripts": {
+      "start": "node index.js"
+    }
+  , "dependencies": {
+      "socket.io": "latest"
+    , "express": "latest"
+    , "jade": ">= 0.0.1"
+  }
+}
