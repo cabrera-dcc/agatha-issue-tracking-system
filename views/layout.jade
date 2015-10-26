@@ -1,6 +1,17 @@
-!!!
+doctype html
 html
   head
-    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Agatha | Issue Tracking System
+    link(rel='stylesheet', href='/stylesheets/normalize.min.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    script(type='text/javascript', src='/javascripts/modernizr.min.js')
+  body
+    include header-index
+    block content
+    script(type='text/javascript', src='/javascripts/jquery.min.js')
+    script(type='text/javascript', src='/javascripts/foundation.min.js')
+    script.
+      $(document).foundation();

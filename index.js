@@ -2,8 +2,14 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+app.set('view engine', 'jade');
+
 app.get('/', function (req, res){
 	res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/development', function(req, res){
+	res.render('index', { title: 'AGATHA' });
 });
 
 app.get('/stylesheets/foundation.min.css', function (req, res){
